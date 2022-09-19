@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tailwind Playground</title>
+	<link rel="stylesheet" href="input.css">
+</head>
+
+<body>
+		<!-- 1. Headers Navbar -->
+			<nav class="navbar flex flex-row p-6 justify-between md:justify-around">
+				<div class=" my-auto ">
+					<a href="https://www.google.com">
+						<img class="w-14 md:w-16 lg:w-20" src="https://uilogos.co/img/logomark/u-mark.png" alt="logo">
+					</a>
+				</div>
+
+				<ul class="hidden md:flex space-x-10 m-7">
+					<li><a class="navlinks text-slate-700 py-2 hover:text-blue-800 text-lg hover:border-b-4 hover:border-blue-600 ease-in-out duration-300" href="#">Home</a></li>
+				
+					<li><a class="navlinks text-slate-700 py-2 hover:text-blue-800 text-lg hover:border-b-4 hover:border-blue-600 ease-in-out duration-300" href="#">About</a></li>
+				
+					<li><a class="navlinks text-slate-700 py-2 hover:text-blue-800 text-lg hover:border-b-4 hover:border-blue-600 ease-in-out duration-300" href="#">Services</a></li>
+				
+					<li><a class="navlinks text-slate-700 py-2 hover:text-blue-800 text-lg hover:border-b-4 hover:border-blue-600 ease-in-out duration-300" href="#">Contact</a></li>
+				</ul>
+
+				<div class="my-auto">
+					<a class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-3 md:py-4 px-5 rounded min-h-fit basis-1/2" href="www.google.com">Click Me</a>
+				</div>
+
+				<!-- Mobile Nav -->
+				<div id="mobileNavButton" class="md:hidden flex items-center">
+					<button class="outline-none mobile-menu-button">
+					<svg class=" w-9 h-9 text-gray-500 hover:text-blue-600 "
+						x-show="!showMenu"
+						fill="none"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+					>
+						<path d="M4 6h16M4 12h16M4 18h16"></path>
+					</svg>
+				</button>
+				</div>
+				<!-- Mobile Nav -->
+			</nav>
+			
+			<nav id="mobileNav" class="mobilenav hidden flex justify-center block py-6 border bg-slate-50">
+				<ul >
+					<li class="py-1"><a class=" text-lg " href="#">Home</a></li>
+					<li class="py-1"><a class=" text-lg " href="#">About</a></li>
+					<li class="py-1"><a class=" text-lg " href="#">Services</a></li>
+					<li class="py-1"><a class=" text-lg " href="#">Contact</a></li>
+				</ul>
+			</nav>
+		<!-- 1. Headers Navbar -->
+
+		<script>
+			let btn = document.getElementById('mobileNavButton')
+			let menu = document.getElementById('mobileNav')
+			let navlinks = document.getElementsByClassName('navlinks')
+
+			btn.addEventListener("click", ()=>{
+				menu.classList.toggle('hidden')
+			})
+		</script>
+	</body>
+</html>
